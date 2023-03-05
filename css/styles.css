@@ -223,12 +223,12 @@ button:active {
 }
 .our-clients-icon:hover,
 .our-clients-icon:focus,
-.our-clients-icon:active{
+.our-clients-icon:active {
   --color2: var(--brand-color);
   --color4: var(--brand-color);
   border-color: var(--brand-color);
   cursor: pointer;
-  transition: var(--transition-delay) ;
+  transition: var(--transition-delay);
 }
 .portfolio-select:hover,
 .portfolio-select:focus,
@@ -543,10 +543,11 @@ li:last-child button {
   color: var(--brand-color);
   fill: var(--brand-color);
   transition: var(--transition-delay);
-  
 }
-.input-box:focus-within {outline-color: var(--brand-color);
-transition: var(--transition-delay);}
+.input-box:focus-within {
+  outline-color: var(--brand-color);
+  transition: var(--transition-delay);
+}
 
 .input-item {
   background-color: var(--background-color);
@@ -583,8 +584,11 @@ transition: var(--transition-delay);}
   padding: 0;
   transition: var(--transition-delay);
 }
-.sign-in-button:hover, .sign-in-button:focus, .sign-in-button:active 
-{scale:1.1;}
+.sign-in-button:hover,
+.sign-in-button:focus,
+.sign-in-button:active {
+  scale: 1.1;
+}
 .sign-in-text {
   padding: 10px 24px 10px 42px;
 }
@@ -637,7 +641,6 @@ transition: var(--transition-delay);}
   padding-left: 35px;
   gap: 10px;
   transition: var(--transition-delay);
-  
 }
 .input-box-name {
   position: absolute;
@@ -683,7 +686,7 @@ transition: var(--transition-delay);}
   gap: 8px;
   margin-top: 10px;
   margin-bottom: 30px;
-  transition: var(--transition-delay)
+  transition: var(--transition-delay);
 }
 .checkbox-size {
   position: absolute;
@@ -704,20 +707,20 @@ transition: var(--transition-delay);}
 }
 .vector-outline {
   position: absolute;
-  top:0;
+  top: 0;
   left: -25px;
   width: 16px;
   height: 15px;
-  }
+}
 
 .checkbox-size:checked ~ .vector-background {
   background-color: var(--brand-color);
   border-color: var(--brand-color);
- transition: var(--transition-delay);
- visibility: visible;
+  transition: var(--transition-delay);
+  visibility: visible;
 }
 .checkbox-size:checked ~ .vector-outline {
- fill: var(--brand-color);
+  fill: var(--brand-color);
   transition: var(--transition-delay);
 }
 
@@ -731,7 +734,9 @@ transition: var(--transition-delay);}
   outline-color: var(--brand-color);
   resize: none;
 }
-.consent-link {color: var(--brand-color);}
+.consent-link {
+  color: var(--brand-color);
+}
 
 /* @keyframes YouSpinMeRoundNow {
   33% {
