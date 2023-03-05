@@ -6,6 +6,8 @@
   /*Nie wpisałem tu kolorów białego i czarnego jako, że się je szybciej wpisuje niż pozostałe i pojawiają się tylko kilka razy na całej stronie. Czy lepiej jednak wpisywać tu każdy kolor?*/
   --brand-color: rgb(33, 150, 243, 100%);
   --brand-color-opaque: rgb(33, 150, 243, 90%);
+  --letter-color: rgb(255, 255, 255, 100%);
+  --main-background-color: rgb(255, 255, 255, 100%);
   --text-color: rgb(33, 33, 33, 100%);
   --background-color: rgb(47, 48, 58, 100%);
   --hero-background: rgb(47, 48, 58, 40%);
@@ -61,7 +63,7 @@ stronie nie ułożą się tak jak trzeba.*/
   transition: var(--transition-delay);
 }
 .alternate-logo-color {
-  color: white;
+  color: var(--letter-color);
 }
 .brand-color-logo {
   color: var(--brand-color);
@@ -70,7 +72,7 @@ stronie nie ułożą się tak jak trzeba.*/
 .menu {
   height: 80px;
   border: #ececec 1px solid;
-  background-color: white;
+  background-color: var(--main-background-color);
   display: flex;
   align-items: center;
 }
@@ -130,7 +132,7 @@ header section ul li:first-child {
   font-weight: 900;
   letter-spacing: 2.5px;
   line-height: 1.36;
-  color: white;
+  color: var(--main-background-color);
   margin-left: 252px;
   margin-right: 252px;
 
@@ -193,15 +195,14 @@ button:hover,
 button:focus,
 button:active {
   background-color: var(--brand-color);
-  color: white;
+  color: var(--main-background-color);
   transition: var(--transition-delay);
 }
 
 .social-media-item:hover,
 .social-media-item:focus,
 .social-media-item-footer:hover,
-.social-media-item-footer:focus,
-.social-media-item-footer:active {
+.social-media-item-footer:focus {
   border-radius: 50%;
   --color4: white;
   background-color: var(--brand-color);
@@ -210,18 +211,24 @@ button:active {
 }
 .social-media-item:active {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  background-color: white;
+  background-color: var(--main-background-color);
   --color4: var(--icon-color);
+  border-radius: 50%;
+}
+.social-media-item-footer:active {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-color: var(--main-background-color);
+  --color4: var(--background-color);
   border-radius: 50%;
 }
 .our-clients-icon:hover,
 .our-clients-icon:focus,
-.our-clients-icon:active {
+.our-clients-icon:active{
   --color2: var(--brand-color);
   --color4: var(--brand-color);
   border-color: var(--brand-color);
   cursor: pointer;
-  transition: var(--transition-delay);
+  transition: var(--transition-delay) ;
 }
 .portfolio-select:hover,
 .portfolio-select:focus,
@@ -245,7 +252,7 @@ button:active {
   height: 294px;
   background-color: var(--brand-color-opaque);
   font-size: 18px;
-  color: white;
+  color: var(--main-background-color);
   line-height: 1.33;
   padding: 49px 45px 49px 24px;
   transition: var(--transition-delay);
@@ -261,7 +268,7 @@ button:active {
 }
 /*Main*/
 .background-main {
-  background-color: white;
+  background-color: var(--main-background-color);
 }
 .spacing-portfolio-select {
   display: flex;
@@ -301,7 +308,7 @@ li:last-child button {
   border: 1px solid #eeeeee;
   position: relative;
   z-index: 1;
-  background-color: white;
+  background-color: var(--main-background-color);
 }
 .portfolio-name {
   font-size: 18px;
@@ -377,7 +384,7 @@ li:last-child button {
   width: 370px;
   background-color: rgba(47, 48, 58, 80%);
   font-weight: 700;
-  color: white;
+  color: var(--letter-color);
   text-transform: uppercase;
 }
 
@@ -385,7 +392,7 @@ li:last-child button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
-  padding-top:7px;
+  padding-top: 7px;
   font-style: medium;
 }
 .team-job {
@@ -403,19 +410,19 @@ li:last-child button {
   text-align: center;
 }
 .our-team-photo {
-  background-color: white;
+  background-color: var(--main-background-color);
   box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
     0px 1px 3px 0px #0000001f;
 
   border-radius: 0px 0px 4px 4px;
-  height:428px;
+  height: 428px;
 }
 .social-media-list {
   display: flex;
   justify-content: space-evenly;
   padding: 0;
-  margin-left:30px;
-  margin-right:30px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 .social-media-item {
   margin-bottom: 30px;
@@ -431,7 +438,7 @@ li:last-child button {
   padding-right: 0;
 }
 .our-clients {
-  background-color: white;
+  background-color: var(--main-background-color);
   display: flex;
   align-items: center;
 }
@@ -454,8 +461,11 @@ li:last-child button {
 
 /*Footer*/
 .spacing-footer {
-  padding-top: 60px;
-  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 9px;
+  padding: 0;
 }
 .background-footer {
   background-color: var(--background-color);
@@ -464,6 +474,9 @@ li:last-child button {
 .wrapper {
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  vertical-align: baseline;
 }
 
 .info-footer {
@@ -477,7 +490,7 @@ li:last-child button {
 .info-footer-location {
   text-decoration: none;
   line-height: 1.71;
-  color: white;
+  color: var(--letter-color);
   font-style: normal;
   transition: var(--transition-delay);
 }
@@ -488,14 +501,15 @@ li:last-child button {
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-left: 70px;
+  justify-content: baseline;
+
   transition: var(--transition-delay);
 }
 .social-media-list-items {
   display: flex;
   padding-left: 0;
   justify-content: space-between;
+  margin-top: 20px;
 }
 .social-media-list-items:last-child {
   padding-right: 0;
@@ -507,16 +521,74 @@ li:last-child button {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  --color4: var(--letter-color);
   background-color: rgba(255, 255, 255, 10%);
 }
 .social-media-item-footer:last-child {
   padding-right: 0;
 }
+
 .join-us {
   font-weight: 700;
-  color: white;
+  color: var(--letter-color);
   margin: 0;
   text-transform: uppercase;
+}
+
+.label-items {
+  display: inline-flex;
+  padding-right: 12px;
+}
+.form-item:focus-within > svg {
+  color: var(--brand-color);
+  fill: var(--brand-color);
+  transition: var(--transition-delay);
+  
+}
+.input-box:focus-within {outline-color: var(--brand-color);
+transition: var(--transition-delay);}
+
+.input-item {
+  background-color: var(--background-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  width: 358px;
+  height: 50px;
+  padding: 15px 0 15px 16px;
+  color: var(--letter-color);
+}
+.sign-in {
+  color: var(--letter-color);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.sign-in-button {
+  width: 200px;
+  height: 50px;
+  color: var(--letter-color);
+  background-color: var(--brand-color);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 0;
+}
+.sign-in-button:hover, .sign-in-button:focus, .sign-in-button:active 
+{scale:1.1;}
+.sign-in-text {
+  padding: 10px 24px 10px 42px;
+}
+.sign-in-icon {
+  margin-right: 28px;
 }
 /*Modal*/
 .backdrop {
@@ -526,8 +598,6 @@ li:last-child button {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  visibility: visible;
-  opacity: 1;
   /* animation: FadeIn 4s ease-in-out; */
   transition-property: opacity, visibility;
   transition: var(--transition-delay);
@@ -543,7 +613,7 @@ li:last-child button {
   transform: translate(-50%, -50%);
   width: 528px;
   min-height: 581px;
-  background-color: white;
+  background-color: var(--main-background-color);
   border-radius: 4px;
   transition: var(--transition-delay);
   /* animation: var(--animation); */
@@ -554,7 +624,115 @@ li:last-child button {
 .modal:active {
   animation: none;
 }
-@keyframes YouSpinMeRoundNow {
+.modal-header {
+  text-align: center;
+  margin-top: 40px;
+}
+.input-box {
+  width: 448px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding-left: 35px;
+  gap: 10px;
+  transition: var(--transition-delay);
+  
+}
+.input-box-name {
+  position: absolute;
+  top: 57%;
+  left: 15px;
+}
+.input-box-name:active,
+.input-box-phone:active,
+.input-box-email:active {
+  fill: currentcolor;
+}
+
+.input-box-phone {
+  position: absolute;
+  top: 57%;
+  left: 14.27px;
+}
+.input-box-email {
+  position: absolute;
+  top: 57%;
+  left: 13.5px;
+}
+.label-span {
+  margin-bottom: 4px;
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.form-item {
+  display: inline-flex;
+  flex-direction: column;
+  color: var(--info-color);
+  position: relative;
+}
+.form-consent {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  gap: 8px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  transition: var(--transition-delay)
+}
+.checkbox-size {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.vector-background {
+  position: absolute;
+  top: 0;
+  left: -25px;
+  width: 16px;
+  height: 15px;
+  visibility: hidden;
+  border-radius: 4px;
+}
+.vector-outline {
+  position: absolute;
+  top:0;
+  left: -25px;
+  width: 16px;
+  height: 15px;
+  }
+
+.checkbox-size:checked ~ .vector-background {
+  background-color: var(--brand-color);
+  border-color: var(--brand-color);
+ transition: var(--transition-delay);
+ visibility: visible;
+}
+.checkbox-size:checked ~ .vector-outline {
+ fill: var(--brand-color);
+  transition: var(--transition-delay);
+}
+
+.text-area-box {
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-left: 16px;
+  outline-color: var(--brand-color);
+  resize: none;
+}
+.consent-link {color: var(--brand-color);}
+
+/* @keyframes YouSpinMeRoundNow {
   33% {
     top: 80%;
     left: 80%;
@@ -592,14 +770,14 @@ li:last-child button {
     opacity: 1;
     scale: 1;
   }
-}
+} */
 .close-btn {
   position: absolute;
   top: 8px;
   right: 8px;
   width: 30px;
   height: 30px;
-  background-color: white;
+  background-color: var(--main-background-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
