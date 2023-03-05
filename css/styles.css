@@ -539,12 +539,17 @@ li:last-child button {
   display: inline-flex;
   padding-right: 12px;
 }
+
 .form-item:focus-within > svg {
   color: var(--brand-color);
   fill: var(--brand-color);
   transition: var(--transition-delay);
 }
 .input-box:focus-within {
+  outline-color: var(--brand-color);
+  transition: var(--transition-delay);
+}
+.text-area-box:focus-within {
   outline-color: var(--brand-color);
   transition: var(--transition-delay);
 }
@@ -647,11 +652,6 @@ li:last-child button {
   top: 57%;
   left: 15px;
 }
-.input-box-name:active,
-.input-box-phone:active,
-.input-box-email:active {
-  fill: currentcolor;
-}
 
 .input-box-phone {
   position: absolute;
@@ -731,8 +731,8 @@ li:last-child button {
   border-radius: 4px;
   padding-top: 12px;
   padding-left: 16px;
-  outline-color: var(--brand-color);
   resize: none;
+  transition: var(--transition-delay);
 }
 .consent-link {
   color: var(--brand-color);
