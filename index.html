@@ -391,7 +391,8 @@
               class="input-item"
               name="footer-email"
               type="email"
-              placeholder="E-mail" />
+              placeholder="E-mail"
+              minlength="5" />
           </label>
           <button type="submit" class="sign-in-button">
             <p class="sign-in-text">Zapisz się</p>
@@ -409,21 +410,36 @@
         <form class="form-list">
           <label class="form-item">
             <span class="label-span">Imię</span>
-            <input class="input-box" type="text" name="modal-name" />
+            <input
+              class="input-box"
+              type="text"
+              name="modal-name"
+              minlength="2"
+              placeholder="Jan" />
             <svg class="input-box-name" width="12" height="12">
               <use href="images/icons.svg#icon-Person"></use>
             </svg>
           </label>
           <label class="form-item">
             <span class="label-span">Telefon</span>
-            <input class="input-box" type="text" name="modal-phone" />
+            <input
+              class="input-box"
+              type="text"
+              name="modal-phone"
+              minlength="9"
+              placeholder="+48 123 456 789" />
             <svg class="input-box-phone" width="13" height="13">
               <use href="images/icons.svg#icon-Phone"></use>
             </svg>
           </label>
           <label class="form-item">
             <span class="label-span">Email</span>
-            <input class="input-box" type="email" name="modal-email" />
+            <input
+              class="input-box"
+              type="email"
+              name="modal-email"
+              minlength="5"
+              placeholder="jan.kowalski@wp.pl" />
             <svg class="input-box-email" width="15" height="12">
               <use href="images/icons.svg#icon-Envelope-alt"></use>
             </svg>
