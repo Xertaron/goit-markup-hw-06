@@ -232,11 +232,12 @@ button:active {
 .our-clients-icon:hover,
 .our-clients-icon:focus,
 .our-clients-icon:active {
-  --color2: var(--brand-color);
-  --color4: var(--brand-color);
+  transition: var(--transition-delay);
+  --color2:currentColor;
+  --color4:currentColor;
   border-color: var(--brand-color);
   cursor: pointer;
-  transition: var(--transition-delay);
+  color: var(--brand-color);
 }
 
 .portfolio-select:hover,
@@ -466,6 +467,9 @@ li:last-child button {
   justify-content: center;
   align-items: center;
   transition: var(--transition-delay);
+  color: var(--info-color);
+  --color2: var(--info-color);
+  --color4: var(--info-color);
 }
 
 /*Footer*/
